@@ -34,3 +34,20 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      #Codacy tool
+      - name: Run spotbugs and coverage
+        run: | 
+          export CODACY_PROJECT_TOKEN=3f654408917e4c3b9fe34696275ed707
+          export CODACY_CODE=${{ env.workspace }}
+          docker run \
+            --rm=true \
+            --env CODACY_CODE="$CODACY_CODE" \
+            --volume /var/run/docker.sock:/var/run/docker.sock \
+            --volume "$CODACY_CODE":"$CODACY_CODE" \
+            --volume /tmp:/tmp \
+            codacy/codacy-analysis-cli \
+              analyze --tool spotbugs \
+            --allow-network \
+            --upload \
+            --verbose
