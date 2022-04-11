@@ -39,6 +39,7 @@ jobs:
       - name: Run spotbugs and coverage
         run: | 
           export CODACY_CODE=$GITHUB_WORKSPACE
+          mvn compile
           docker run \
             --rm=true \
             --env CODACY_CODE="$CODACY_CODE" \
