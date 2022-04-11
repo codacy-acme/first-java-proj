@@ -49,5 +49,5 @@ jobs:
               analyze --tool spotbugs \
             --allow-network \
             --upload \
-            --verbose
+            --verbose \
             --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
