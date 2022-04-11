@@ -38,7 +38,6 @@ jobs:
       #Codacy tool
       - name: Run spotbugs and coverage
         run: | 
-          export CODACY_PROJECT_TOKEN=3f654408917e4c3b9fe34696275ed707
           export CODACY_CODE=${{ env.workspace }}
           docker run \
             --rm=true \
@@ -51,3 +50,4 @@ jobs:
             --allow-network \
             --upload \
             --verbose
+            --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
