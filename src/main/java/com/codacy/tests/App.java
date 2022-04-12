@@ -10,9 +10,9 @@ public class App
     {
         System.out.println( "Hello World!" );
     }
-    void sumNumbers()
+    int sumNumbers(int num1, int num2)
     {
-        System.out.println("The sum of 2 with 3 is :"+(2+3));
+        return num1+num2;
     }
 
     //this part needs to be improved - just a test
