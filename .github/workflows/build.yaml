@@ -52,3 +52,5 @@ jobs:
             --upload \
             --verbose \
             --project-token ${{ secrets.CODACY_PROJECT_TOKEN }}
+          mvn test
+          bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r target/site/jacoco/jacoco.xml -t  ${{ secrets.CODACY_PROJECT_TOKEN }}
