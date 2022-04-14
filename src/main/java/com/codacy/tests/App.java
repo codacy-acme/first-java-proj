@@ -15,6 +15,7 @@ public class App
         return num1+num2;
     }
 
-    //this part needs to be improved - just a test
-  
+    void alsoBad() {
+        byte[] iv = "secret iv in here".getBytes();
+    }
 }

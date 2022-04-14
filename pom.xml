@@ -41,6 +41,37 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.16.0</version> <!-- or use version from pluginManagement -->
+                <configuration>
+                    <!-- failOnViolation is actually true by default, but can be disabled -->
+                    <failOnViolation>true</failOnViolation>
+                    <!-- printFailingErrors is pretty useful -->
+                    <printFailingErrors>true</printFailingErrors>
+                     <!-- enable incremental analysis -->
+                    <analysisCache>true</analysisCache>
+                    <!-- analysisCacheLocation: optional - points to the following location by default -->
+                    <analysisCacheLocation>${project.build.directory}/pmd/pmd.cache</analysisCacheLocation>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                        <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                 <version>3.16.0</version>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
