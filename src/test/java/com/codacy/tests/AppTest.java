@@ -12,7 +12,7 @@ public class AppTest
 {
     /**
      * Create the test case
-     *
+    * ™
      * @param testName name of the test case
      */
     public AppTest( String testName )
@@ -33,6 +33,8 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        //assertTrue( true );
+        App a = new App();
+        assertEquals( a.sumNumbers(2, 3), 5);
     }
 }
