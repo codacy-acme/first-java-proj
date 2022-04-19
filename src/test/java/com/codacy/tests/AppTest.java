@@ -35,6 +35,6 @@ public class AppTest
     {
         //assertTrue( true );
         App a = new App();
-        assertEquals( a.sumNumbers(2, 3), 5);
+        assertEquals( a.sumNumbers(2, 3), 6);
     }
 }
