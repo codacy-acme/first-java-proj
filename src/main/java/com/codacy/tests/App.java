@@ -1,8 +1,5 @@
 package com.codacy.tests;
-/**
- * Hello world!
- *
- */
+
 public class App 
 {
     public static void main( String[] args )
@@ -13,11 +10,4 @@ public class App
     {
         return num1+num2;
     }
-    // void bad() {
-    //     byte[] iv = new byte[] { 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, };
-    // }
-
-    // void alsoBad() {
-    //     byte[] iv = "secret iv in here".getBytes();
-    // }
 }
