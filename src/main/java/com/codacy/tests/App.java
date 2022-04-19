@@ -1,5 +1,4 @@
 package com.codacy.tests;
-//@SuppressWarnings("PMD")
 /**
  * Hello world!
  *
