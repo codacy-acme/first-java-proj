@@ -8,6 +8,7 @@ public class App
     }
     int sumNumbers(int num1, int num2)
     {
+        System.out.println("adding two numbers");
         return num1+num2;
     }
 }
